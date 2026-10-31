@@ -23,16 +23,6 @@ STACK = [
     ("Infra", ["Docker", "GitHub Actions", "Vercel", "Linux", "Solana"]),
 ]
 
-# The animated `git log` under the intro, newest first: (hash, message, when). Hashes are decoration.
-LOG = [
-    ("a3f9c1e", "win 2nd place at HacktoberFest VVCE with Sworn", "Oct 2026"),
-    ("7be21d4", "open 2 PRs to Kestra: locale bug in secret lookup", "Oct 2026"),
-    ("c4d8021", "ship FundLens core: XIRR solver, NAV sync, auth", "Sep 2026"),
-    ("19e0aa7", "become Tech Lead, The Byte Club", "Aug 2026"),
-    ("e5b7f30", "take over software at Agnie Racing (EV motorsport)", "Aug 2026"),
-    ("0d42b19", "git init: NIE Mysuru, Information Science", "2024"),
-]
-
 # Same palette as header.svg, light first, then dark.
 STYLE = """
     :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --empty: #ebedf0; --chip: #f6f8fa; }
@@ -233,36 +223,6 @@ def stack_svg():
                "\n".join(body))
 
 
-def log_svg():
-    """A terminal-style `git log`: the command types itself out, then each entry slides in."""
-    rowh, top, cmd = 26, 20, "git log --oneline --author=tanishq"
-    body = [f'<text class="mono" x="0" y="{top}" font-size="13.5"><tspan fill="var(--accent)">$</tspan> '
-            f'<tspan fill="var(--fg)" clip-path="url(#type)">{cmd}</tspan></text>',
-            f'<clipPath id="type"><rect x="14" y="0" width="{len(cmd) * 8.2 + 4:.0f}" height="30" '
-            f'style="transform-box: fill-box; transform-origin: left; transform: scaleX(0); '
-            f'animation: grow 1.4s steps({len(cmd)}) .2s forwards"/></clipPath>']
-    for i, (h, msg, when) in enumerate(LOG):
-        y, t = top + 14 + (i + 1) * rowh - 8, 1.75 + i * 0.22
-        body.append(
-            f'<g style="opacity: 0; animation: slide .45s ease-out {t:.2f}s forwards">'
-            f'<circle cx="4" cy="{y - 4.5}" r="3.5" fill="{"var(--accent)" if i == 0 else "var(--line)"}"/>'
-            f'<text class="mono" x="18" y="{y}" font-size="13"><tspan fill="var(--accent)">{h}</tspan>'
-            f'<tspan dx="12" fill="var(--fg)">{escape(msg)}</tspan></text>'
-            f'<text class="mono" x="840" y="{y}" font-size="12" fill="var(--muted)" text-anchor="end">{when}</text></g>')
-        if i < len(LOG) - 1:
-            body.append(f'<line x1="4" y1="{y + 1}" x2="4" y2="{y + rowh - 10}" stroke="var(--line)" '
-                        f'style="opacity: 0; animation: fade .3s ease-out {t + .2:.2f}s forwards"/>')
-    end = top + 14 + len(LOG) * rowh + 16
-    body.append(f'<text class="mono" x="0" y="{end}" font-size="13.5" fill="var(--accent)" '
-                f'style="opacity: 0; animation: fade .1s {1.95 + len(LOG) * .22:.2f}s forwards">$ '
-                f'<tspan fill="var(--fg)" style="animation: blink 1s steps(1) {2.2 + len(LOG) * .22:.2f}s infinite">▍</tspan></text>')
-    style = """
-    @keyframes slide { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: none; } }
-    @keyframes blink { 50% { opacity: 0; } }
-    """
-    return svg(840, end + 6, "git log: " + "; ".join(f"{m} ({w})" for _, m, w in LOG), "\n".join(body), style)
-
-
 def meter_svg(n):
     """Five bars, n of them lit, filling left to right. Used as the complexity rating next to each project."""
     body = []
@@ -290,7 +250,6 @@ def main():
     write("stats.svg", stats_svg(s))
     write("activity.svg", activity_svg(s))
     write("stack.svg", stack_svg())
-    write("log.svg", log_svg())
     for n in range(1, 6):
         write(f"complexity-{n}.svg", meter_svg(n))
     print(json.dumps({k: v for k, v in s.items() if k != "weeks"}))

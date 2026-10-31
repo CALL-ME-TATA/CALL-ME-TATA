@@ -4,8 +4,6 @@ I build full-stack apps and the AI agents that live inside them. TypeScript and 
 
 **Tech Lead** at The Byte Club &nbsp;·&nbsp; **Software lead** at Agnie Racing
 
-<img src="./assets/log.svg" width="100%" alt="git log: 2nd place at HacktoberFest VVCE with Sworn; 2 PRs to Kestra; FundLens core shipped; Tech Lead at The Byte Club; software at Agnie Racing; started at NIE Mysuru." />
-
 <br>
 
 <img src="./assets/stack.svg" width="100%" alt="Stack: TypeScript, React, Next.js, Node.js, Express, Python, FastAPI, PostgreSQL, MongoDB, Redis, LangGraph, Docker and more." />
