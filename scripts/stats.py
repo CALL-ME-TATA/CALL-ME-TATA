@@ -34,7 +34,7 @@ PROJECTS = [
     ("empathiq", "EmpathIQ", "1st place · TCS Hackathon",
      "Support bot that reads how a customer feels and knows when to hand off to a human.",
      ["FastAPI", "LangGraph", "PyTorch", "React"], 4),
-    ("byteclub", "Byte Club website", "Club · 30 commits",
+    ("byteclub", "Byte Club website", "Lead developer · 92 commits",
      "The official site for The Byte Club at NIE, front to back.",
      ["Next.js", "Express", "Supabase"], 3),
     ("wattwise", "WattWise", "Agents",

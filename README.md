@@ -17,7 +17,7 @@ I build full-stack apps and the AI agents that live inside them. TypeScript and 
 <a href="https://github.com/HackToBerFest-VVCE/t2c1-dancing-burgers"><img src="./assets/card-sworn.svg" width="49%" alt="Sworn: 2nd place at HacktoberFest VVCE. Hires AI agents from Solana's agent registries, benchmarks them, and fires the ones that fail." /></a>
 <a href="https://github.com/CALL-ME-TATA/FundLens"><img src="./assets/card-fundlens.svg" width="49%" alt="FundLens: mutual fund tracker with real returns and XIRR." /></a>
 <a href="https://github.com/CALL-ME-TATA/Retail_Chatbot"><img src="./assets/card-empathiq.svg" width="49%" alt="EmpathIQ: 1st place at the TCS Hackathon. Support bot that reads customer sentiment and escalates to a human." /></a>
-<a href="https://github.com/thewalker045/ByteClub2026-V2"><img src="./assets/card-byteclub.svg" width="49%" alt="Byte Club website: the official site for The Byte Club at NIE." /></a>
+<a href="https://github.com/CALL-ME-TATA/ByteClub2026"><img src="./assets/card-byteclub.svg" width="49%" alt="Byte Club website: lead developer, 92 commits. The official site for The Byte Club at NIE." /></a>
 <a href="https://github.com/CALL-ME-TATA/wattwise"><img src="./assets/card-wattwise.svg" width="49%" alt="WattWise: agents that watch power use, flag anomalies and forecast usage." /></a>
 <a href="https://github.com/CALL-ME-TATA/inventory-management-mern"><img src="./assets/card-inventory.svg" width="49%" alt="Inventory: MERN inventory with products, variants, sales and purchases." /></a>
 
@@ -42,7 +42,7 @@ I build full-stack apps and the AI agents that live inside them. TypeScript and 
 - Answers grounded in a TF-IDF knowledge base, Gemini with fallbacks, template replies if no LLM is reachable
 
 **Byte Club website**
-- Next.js frontend and an Express backend on Supabase, with Resend for email. One of the main contributors, 30 commits
+- Next.js frontend and an Express backend on Supabase, with Resend for email. I'm the lead developer: 92 of its 107 commits
 
 **WattWise**
 - Separate Google ADK agents for ingestion, anomaly detection, forecasting and reporting, over time-series energy data through an async pipeline
