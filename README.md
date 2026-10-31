@@ -41,7 +41,7 @@ I build full-stack apps and the AI agents that live inside them. TypeScript and 
 - RoBERTa sentiment at 97.2% accuracy on held-out retail chats; also fine-tuned DistilBERT on Amazon reviews to compare
 - Answers grounded in a TF-IDF knowledge base, Gemini with fallbacks, template replies if no LLM is reachable
 
-**Byte Club website**
+**Byte Club website** &nbsp;<sub><a href="https://byteclubnie.vercel.app/">Visit live</a></sub>
 - Next.js frontend and an Express backend on Supabase, with Resend for email. I'm the lead developer: 92 of its 107 commits
 
 **WattWise**
@@ -60,7 +60,7 @@ I build full-stack apps and the AI agents that live inside them. TypeScript and 
 - [#21356](https://github.com/kestra-io/kestra/pull/21356) &nbsp;Upper-case Pebble function arguments and secret keys with `Locale.ROOT`, so `secret('api_key')` stops looking up `APİ_KEY` on Turkish machines
 - [#21951](https://github.com/kestra-io/kestra/pull/21951) &nbsp;Re-enable `SecretFunctionTest.getSecret` and migrate its flow to `fromJson`
 
-**[Open Source BYTE 2K26](https://byteopensource.github.io/)** &nbsp;a beginner open source program I help run at The Byte Club, where students land their first PR on the site itself. 29 commits
+**[Open Source BYTE 2K26](https://byteopensource.github.io/)** &nbsp;a beginner open source program I help run at The Byte Club, where students land their first PR on the site itself. 29 commits · [code](https://github.com/byteopensource/byteopensource.github.io)
 
 <br>
 
