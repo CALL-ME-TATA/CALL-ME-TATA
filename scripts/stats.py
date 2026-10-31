@@ -31,7 +31,7 @@ PROJECTS = [
     ("fundlens", "FundLens", "In progress",
      "Mutual fund tracker: SIP and redemption history in, real returns and XIRR out.",
      ["TypeScript", "PostgreSQL", "Express", "React"], 4),
-    ("empathiq", "EmpathIQ", "TCS Hackathon",
+    ("empathiq", "EmpathIQ", "1st place · TCS Hackathon",
      "Support bot that reads how a customer feels and knows when to hand off to a human.",
      ["FastAPI", "LangGraph", "PyTorch", "React"], 4),
     ("byteclub", "Byte Club website", "Club · 30 commits",
@@ -111,7 +111,7 @@ def fetch(token):
         to -= timedelta(days=365)
     for w in windows:
         cc = w["contributionsCollection"]
-        commits += cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
+        commits += cc["totalCommitContributions"]  # public commits only; private work has no type, so it is left out
         for wk in cc["contributionCalendar"]["weeks"]:
             for d in wk["contributionDays"]:
                 days[d["date"]] = d["contributionCount"]
@@ -122,7 +122,8 @@ def fetch(token):
         "prs": first["pullRequests"]["totalCount"],
         "merged": first["merged"]["totalCount"],
         "repos": first["repositoriesContributedTo"]["totalCount"],
-        "year_total": first["contributionsCollection"]["contributionCalendar"]["totalContributions"],
+        "year_total": sum(n for d, n in days.items() if d.startswith(str(now.year))),
+        "last_12m": first["contributionsCollection"]["contributionCalendar"]["totalContributions"],
         "weeks": last_year,
         **streaks(days),
     }
@@ -164,7 +165,7 @@ def demo():
             days[d.isoformat()] = c
             week.append((d.isoformat(), c, 0 if not c else min(4, 1 + c // 3)))
         weeks.append(week)
-    return {"commits": 412, "prs": 9, "merged": 6, "repos": 5, "year_total": sum(days.values()),
+    return {"commits": 412, "prs": 9, "merged": 6, "repos": 5, "year_total": sum(days.values()), "last_12m": sum(days.values()),
             "weeks": weeks, **streaks(days)}
 
 
@@ -209,7 +210,7 @@ def activity_svg(s):
                 f'<title>{count} on {d}</title></rect>')
     y = top + 7 * pitch + 20
     width = len(s["weeks"]) * pitch
-    body.append(f'<text class="m" x="0" y="{y}">{s["year_total"]:,} contributions in the last year</text>')
+    body.append(f'<text class="m" x="0" y="{y}">{s["last_12m"]:,} contributions in the last year</text>')
     lx = width - 5 * pitch - 70
     body.append(f'<text class="m" x="{lx}" y="{y}">Less</text>')
     for i, op in enumerate(["1", ".3", ".5", ".75", "1"]):
@@ -222,7 +223,7 @@ def activity_svg(s):
     rect { opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .35s ease-out forwards; }
     rect.k { animation-delay: 1.2s; }
     """
-    return svg(width, y + 6, f"{s['year_total']} contributions in the last year", "\n".join(body), style)
+    return svg(width, y + 6, f"{s['last_12m']} contributions in the last year", "\n".join(body), style)
 
 
 def stack_svg():
