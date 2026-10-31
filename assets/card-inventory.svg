@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="190" viewBox="0 0 420 190" role="img" aria-label="Inventory: MERN inventory with products, variants, sales and purchases. Complexity 2 of 5.">
+<style>
+    :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --empty: #ebedf0; --chip: #f6f8fa; --card: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; --empty: #21262d; --chip: #161b22; --card: #0d1117; }
+    }
+    text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace; }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes pop { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: scale(1); } }
+@keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }</style>
+<rect x="1" y="1" width="418" height="188" rx="12" fill="var(--card)" stroke="var(--line)"/>
+<rect x="1" y="24" width="3" height="40" rx="1.5" fill="var(--accent)" style="transform-box: fill-box; transform-origin: top; transform: scaleY(0); animation: growY .6s ease-out .2s forwards"/>
+<g style="opacity: 0; animation: up .6s ease-out .1s forwards"><text class="mono" x="24" y="38" font-size="11" fill="var(--accent)" letter-spacing="0.6">FULL STACK</text><text x="24" y="66" font-size="21" font-weight="600" fill="var(--fg)" letter-spacing="-0.4">Inventory</text></g>
+<text x="24" y="94" font-size="13.5" fill="var(--muted)" style="opacity: 0; animation: fade .6s ease-out 0.35s forwards">MERN inventory with products, variants, sales and</text>
+<text x="24" y="113" font-size="13.5" fill="var(--muted)" style="opacity: 0; animation: fade .6s ease-out 0.45s forwards">purchases.</text>
+<g style="opacity: 0; animation: up .4s ease-out 0.60s forwards"><rect x="24" y="148" width="87" height="22" rx="11" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="67.5" y="163" text-anchor="middle" font-size="11.5" fill="var(--fg)">TypeScript</text></g>
+<g style="opacity: 0; animation: up .4s ease-out 0.68s forwards"><rect x="117" y="148" width="52" height="22" rx="11" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="143.0" y="163" text-anchor="middle" font-size="11.5" fill="var(--fg)">React</text></g>
+<g style="opacity: 0; animation: up .4s ease-out 0.76s forwards"><rect x="175" y="148" width="66" height="22" rx="11" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="208.0" y="163" text-anchor="middle" font-size="11.5" fill="var(--fg)">MongoDB</text></g>
+<rect x="351" y="28" width="7" height="12" rx="1.5" fill="var(--accent)" style="opacity: 0; animation: fade .3s ease-out 0.50s forwards"/>
+<rect x="360" y="28" width="7" height="12" rx="1.5" fill="var(--accent)" style="opacity: 0; animation: fade .3s ease-out 0.62s forwards"/>
+<rect x="369" y="28" width="7" height="12" rx="1.5" fill="var(--empty)"/>
+<rect x="378" y="28" width="7" height="12" rx="1.5" fill="var(--empty)"/>
+<rect x="387" y="28" width="7" height="12" rx="1.5" fill="var(--empty)"/>
+<text class="mono" x="394" y="56" font-size="9.5" fill="var(--muted)" text-anchor="end">complexity 2/5</text>
+</svg>

@@ -23,11 +23,33 @@ STACK = [
     ("Infra", ["Docker", "GitHub Actions", "Vercel", "Linux", "Solana"]),
 ]
 
+# Project cards, hardest first: (file slug, name, tag, one-liner, stack, complexity out of 5).
+PROJECTS = [
+    ("sworn", "Sworn", "2nd place · HacktoberFest VVCE",
+     "Hires AI agents from Solana's agent registries, benchmarks them, and fires the ones that fail.",
+     ["Python", "LangGraph", "Solana", "Next.js"], 5),
+    ("fundlens", "FundLens", "In progress",
+     "Mutual fund tracker: SIP and redemption history in, real returns and XIRR out.",
+     ["TypeScript", "PostgreSQL", "Express", "React"], 4),
+    ("empathiq", "EmpathIQ", "TCS Hackathon",
+     "Support bot that reads how a customer feels and knows when to hand off to a human.",
+     ["FastAPI", "LangGraph", "PyTorch", "React"], 4),
+    ("byteclub", "Byte Club website", "Club · 30 commits",
+     "The official site for The Byte Club at NIE, front to back.",
+     ["Next.js", "Express", "Supabase"], 3),
+    ("wattwise", "WattWise", "Agents",
+     "Agents that watch power use, flag anomalies and forecast what comes next.",
+     ["Python", "Google ADK", "LLMs"], 3),
+    ("inventory", "Inventory", "Full stack",
+     "MERN inventory with products, variants, sales and purchases.",
+     ["TypeScript", "React", "MongoDB"], 2),
+]
+
 # Same palette as header.svg, light first, then dark.
 STYLE = """
-    :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --empty: #ebedf0; --chip: #f6f8fa; }
+    :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --empty: #ebedf0; --chip: #f6f8fa; --card: #ffffff; }
     @media (prefers-color-scheme: dark) {
-      :root { --fg: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; --empty: #161b22; --chip: #161b22; }
+      :root { --fg: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; --empty: #21262d; --chip: #161b22; --card: #0d1117; }
     }
     text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace; }
@@ -223,16 +245,48 @@ def stack_svg():
                "\n".join(body))
 
 
-def meter_svg(n):
-    """Five bars, n of them lit, filling left to right. Used as the complexity rating next to each project."""
-    body = []
+def wrap(text, limit):
+    lines, cur = [], ""
+    for word in text.split():
+        if cur and len(cur) + 1 + len(word) > limit:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = f"{cur} {word}".strip()
+    return lines + [cur]
+
+
+def card_svg(name, tag, line, stack, level):
+    """One project card: tag, name, two-line pitch, stack chips and a complexity meter that fills on load."""
+    w, h = 420, 190
+    body = [
+        f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="12" fill="var(--card)" stroke="var(--line)"/>',
+        f'<rect x="1" y="24" width="3" height="40" rx="1.5" fill="var(--accent)" '
+        f'style="transform-box: fill-box; transform-origin: top; transform: scaleY(0); animation: growY .6s ease-out .2s forwards"/>',
+        f'<g style="opacity: 0; animation: up .6s ease-out .1s forwards">'
+        f'<text class="mono" x="24" y="38" font-size="11" fill="var(--accent)" letter-spacing="0.6">{escape(tag.upper())}</text>'
+        f'<text x="24" y="66" font-size="21" font-weight="600" fill="var(--fg)" letter-spacing="-0.4">{escape(name)}</text></g>',
+    ]
+    for i, ln in enumerate(wrap(line, 52)[:2]):
+        body.append(f'<text x="24" y="{94 + i * 19}" font-size="13.5" fill="var(--muted)" '
+                    f'style="opacity: 0; animation: fade .6s ease-out {.35 + i * .1:.2f}s forwards">{escape(ln)}</text>')
+    x = 24
+    for i, item in enumerate(stack):
+        cw = round(len(item) * 6.9 + 18)
+        body.append(f'<g style="opacity: 0; animation: up .4s ease-out {.6 + i * .08:.2f}s forwards">'
+                    f'<rect x="{x}" y="148" width="{cw}" height="22" rx="11" fill="var(--chip)" stroke="var(--line)"/>'
+                    f'<text class="mono" x="{x + cw / 2}" y="163" text-anchor="middle" font-size="11.5" fill="var(--fg)">'
+                    f'{escape(item)}</text></g>')
+        x += cw + 6
     for i in range(5):
-        lit = i < n
-        body.append(
-            f'<rect x="{i * 9}" y="1" width="7" height="10" rx="1.5" fill="{"var(--accent)" if lit else "var(--empty)"}"'
-            + (f' style="opacity: 0; animation: fade .3s ease-out {0.3 + i * 0.12:.2f}s forwards"' if lit else "")
-            + "/>")
-    return svg(44, 12, f"Complexity {n} of 5", "".join(body))
+        lit = i < level
+        body.append(f'<rect x="{w - 24 - (5 - i) * 9}" y="28" width="7" height="12" rx="1.5" '
+                    f'fill="{"var(--accent)" if lit else "var(--empty)"}"'
+                    + (f' style="opacity: 0; animation: fade .3s ease-out {.5 + i * .12:.2f}s forwards"' if lit else "") + "/>")
+    body.append(f'<text class="mono" x="{w - 26}" y="56" font-size="9.5" fill="var(--muted)" text-anchor="end">'
+                f'complexity {level}/5</text>')
+    style = "@keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }"
+    return svg(w, h, f"{name}: {line} Complexity {level} of 5.", "\n".join(body), style)
 
 
 def write(name, text):
@@ -250,8 +304,8 @@ def main():
     write("stats.svg", stats_svg(s))
     write("activity.svg", activity_svg(s))
     write("stack.svg", stack_svg())
-    for n in range(1, 6):
-        write(f"complexity-{n}.svg", meter_svg(n))
+    for slug, *card in PROJECTS:
+        write(f"card-{slug}.svg", card_svg(*card))
     print(json.dumps({k: v for k, v in s.items() if k != "weeks"}))
 
 

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="840" height="186" viewBox="0 0 840 186" role="img" aria-label="Stack: Frontend: TypeScript, React, Next.js, Tailwind, Redux; Backend: Node.js, Express, Python, FastAPI, REST, JWT; Data: PostgreSQL, MongoDB, Redis, Supabase; AI: LangGraph, Google ADK, LLM agents, MCP; Infra: Docker, GitHub Actions, Vercel, Linux, Solana">
 <style>
-    :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --empty: #ebedf0; --chip: #f6f8fa; }
+    :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --empty: #ebedf0; --chip: #f6f8fa; --card: #ffffff; }
     @media (prefers-color-scheme: dark) {
-      :root { --fg: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; --empty: #161b22; --chip: #161b22; }
+      :root { --fg: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; --empty: #21262d; --chip: #161b22; --card: #0d1117; }
     }
     text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
     .mono { font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace; }
