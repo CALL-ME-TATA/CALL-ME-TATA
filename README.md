@@ -2,7 +2,7 @@
 
 I'm a full-stack developer and a third-year Information Science student at NIE Mysuru. I build web apps end to end in TypeScript and Python, from the database schema to the UI, and lately a lot of AI agents that work with messy real-world data.
 
-Outside coursework I lead software for Agnie Racing, our college EV motorsport team, and run the tech side of The Byte Club.
+Outside coursework I'm the Tech Lead at The Byte Club, and I lead software for Agnie Racing, our college EV motorsport team.
 
 <br>
 
