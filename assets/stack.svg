@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="186" viewBox="0 0 840 186" role="img" aria-label="Stack: Frontend: TypeScript, React, Next.js, Tailwind, Redux; Backend: Node.js, Express, Python, FastAPI, REST, JWT; Data: PostgreSQL, MongoDB, Redis, Supabase; AI: LangGraph, Google ADK, LLM agents, MCP; Infra: Docker, GitHub Actions, Vercel, Linux, Solana">
+<style>
+    :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; --empty: #ebedf0; --chip: #f6f8fa; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; --empty: #161b22; --chip: #161b22; }
+    }
+    text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace; }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes up { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes pop { from { opacity: 0; transform: scale(.3); } to { opacity: 1; transform: scale(1); } }
+</style>
+<text x="0" y="17" fill="var(--muted)" font-size="12.5" style="opacity: 0; animation: fade .5s ease-out 0.10s forwards">Frontend</text>
+<g style="opacity: 0; animation: up .45s ease-out 0.16s forwards"><rect x="96" y="0" width="100" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="146.0" y="17" text-anchor="middle" fill="var(--fg)" font-size="12.5">TypeScript</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.22s forwards"><rect x="204" y="0" width="62" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="235.0" y="17" text-anchor="middle" fill="var(--fg)" font-size="12.5">React</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.28s forwards"><rect x="274" y="0" width="77" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="312.5" y="17" text-anchor="middle" fill="var(--fg)" font-size="12.5">Next.js</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.34s forwards"><rect x="359" y="0" width="85" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="401.5" y="17" text-anchor="middle" fill="var(--fg)" font-size="12.5">Tailwind</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.40s forwards"><rect x="452" y="0" width="62" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="483.0" y="17" text-anchor="middle" fill="var(--fg)" font-size="12.5">Redux</text></g>
+<text x="0" y="57" fill="var(--muted)" font-size="12.5" style="opacity: 0; animation: fade .5s ease-out 0.25s forwards">Backend</text>
+<g style="opacity: 0; animation: up .45s ease-out 0.31s forwards"><rect x="96" y="40" width="77" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="134.5" y="57" text-anchor="middle" fill="var(--fg)" font-size="12.5">Node.js</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.37s forwards"><rect x="181" y="40" width="77" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="219.5" y="57" text-anchor="middle" fill="var(--fg)" font-size="12.5">Express</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.43s forwards"><rect x="266" y="40" width="70" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="301.0" y="57" text-anchor="middle" fill="var(--fg)" font-size="12.5">Python</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.49s forwards"><rect x="344" y="40" width="77" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="382.5" y="57" text-anchor="middle" fill="var(--fg)" font-size="12.5">FastAPI</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.55s forwards"><rect x="429" y="40" width="54" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="456.0" y="57" text-anchor="middle" fill="var(--fg)" font-size="12.5">REST</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.61s forwards"><rect x="491" y="40" width="47" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="514.5" y="57" text-anchor="middle" fill="var(--fg)" font-size="12.5">JWT</text></g>
+<text x="0" y="97" fill="var(--muted)" font-size="12.5" style="opacity: 0; animation: fade .5s ease-out 0.40s forwards">Data</text>
+<g style="opacity: 0; animation: up .45s ease-out 0.46s forwards"><rect x="96" y="80" width="100" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="146.0" y="97" text-anchor="middle" fill="var(--fg)" font-size="12.5">PostgreSQL</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.52s forwards"><rect x="204" y="80" width="77" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="242.5" y="97" text-anchor="middle" fill="var(--fg)" font-size="12.5">MongoDB</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.58s forwards"><rect x="289" y="80" width="62" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="320.0" y="97" text-anchor="middle" fill="var(--fg)" font-size="12.5">Redis</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.64s forwards"><rect x="359" y="80" width="85" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="401.5" y="97" text-anchor="middle" fill="var(--fg)" font-size="12.5">Supabase</text></g>
+<text x="0" y="137" fill="var(--muted)" font-size="12.5" style="opacity: 0; animation: fade .5s ease-out 0.55s forwards">AI</text>
+<g style="opacity: 0; animation: up .45s ease-out 0.61s forwards"><rect x="96" y="120" width="92" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="142.0" y="137" text-anchor="middle" fill="var(--fg)" font-size="12.5">LangGraph</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.67s forwards"><rect x="196" y="120" width="100" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="246.0" y="137" text-anchor="middle" fill="var(--fg)" font-size="12.5">Google ADK</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.73s forwards"><rect x="304" y="120" width="100" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="354.0" y="137" text-anchor="middle" fill="var(--fg)" font-size="12.5">LLM agents</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.79s forwards"><rect x="412" y="120" width="47" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="435.5" y="137" text-anchor="middle" fill="var(--fg)" font-size="12.5">MCP</text></g>
+<text x="0" y="177" fill="var(--muted)" font-size="12.5" style="opacity: 0; animation: fade .5s ease-out 0.70s forwards">Infra</text>
+<g style="opacity: 0; animation: up .45s ease-out 0.76s forwards"><rect x="96" y="160" width="70" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="131.0" y="177" text-anchor="middle" fill="var(--fg)" font-size="12.5">Docker</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.82s forwards"><rect x="174" y="160" width="130" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="239.0" y="177" text-anchor="middle" fill="var(--fg)" font-size="12.5">GitHub Actions</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.88s forwards"><rect x="312" y="160" width="70" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="347.0" y="177" text-anchor="middle" fill="var(--fg)" font-size="12.5">Vercel</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 0.94s forwards"><rect x="390" y="160" width="62" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="421.0" y="177" text-anchor="middle" fill="var(--fg)" font-size="12.5">Linux</text></g>
+<g style="opacity: 0; animation: up .45s ease-out 1.00s forwards"><rect x="460" y="160" width="70" height="26" rx="6" fill="var(--chip)" stroke="var(--line)"/><text class="mono" x="495.0" y="177" text-anchor="middle" fill="var(--fg)" font-size="12.5">Solana</text></g>
+</svg>
