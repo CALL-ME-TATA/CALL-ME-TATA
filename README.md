@@ -1,8 +1,10 @@
 <img src="./header.svg" width="100%" alt="Tanishq Dhawan. Full-stack developer, AI agents, open source." />
 
-I'm a full-stack developer and a third-year Information Science student at NIE Mysuru. I build web apps end to end in TypeScript and Python, from the database schema to the UI, and lately a lot of AI agents that work with messy real-world data.
+I build full-stack apps and the AI agents that live inside them. TypeScript and Python, schema to UI, and I care most about the boring parts that make software trustworthy: money stored as `DECIMAL`, claims traced to a source, agents that get fired when they fail.
 
-Outside coursework I'm the Tech Lead at The Byte Club, and I lead software for Agnie Racing, our college EV motorsport team.
+**Tech Lead** at The Byte Club &nbsp;·&nbsp; **Software lead** at Agnie Racing
+
+<img src="./assets/log.svg" width="100%" alt="git log: 2nd place at HacktoberFest VVCE with Sworn; 2 PRs to Kestra; FundLens core shipped; Tech Lead at The Byte Club; software at Agnie Racing; started at NIE Mysuru." />
 
 <br>
 
