@@ -111,7 +111,8 @@ def fetch(token):
         to -= timedelta(days=365)
     for w in windows:
         cc = w["contributionsCollection"]
-        commits += cc["totalCommitContributions"]  # public commits only; private work has no type, so it is left out
+        # GitHub reports private work as one untyped count; for this profile it is essentially all commits
+        commits += cc["totalCommitContributions"] + cc["restrictedContributionsCount"]
         for wk in cc["contributionCalendar"]["weeks"]:
             for d in wk["contributionDays"]:
                 days[d["date"]] = d["contributionCount"]
@@ -173,7 +174,7 @@ def demo():
 
 def stats_svg(s):
     items = [
-        (f"{s['commits']:,}", "commits, all time"),
+        (f"{s['commits']:,}", "commits, incl. private"),
         (f"{s['year_total']:,}", "contributions this year"),
         (str(s["prs"]), f"pull requests, {s['merged']} merged" if s["merged"] else "pull requests opened"),
         (str(s["repos"]), "repos contributed to"),
