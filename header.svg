@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="190" viewBox="0 0 840 190" role="img" aria-label="Tanishq Dhawan">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="190" viewBox="0 0 840 190" role="img" aria-label="Tanishq Dhawan, full-stack developer">
   <style>
     :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; }
     @media (prefers-color-scheme: dark) {
@@ -32,20 +32,19 @@
   <text class="name" x="0" y="78">Tanishq Dhawan</text>
 
   <text y="118">
-    <tspan class="sub s1" x="0">AI agents</tspan>
+    <tspan class="sub s1" x="0">Full-stack developer</tspan>
     <tspan class="sub dot-sep s1" dx="8">/</tspan>
-    <tspan class="sub s2" dx="8">fintech</tspan>
+    <tspan class="sub s2" dx="8">AI agents</tspan>
     <tspan class="sub dot-sep s2" dx="8">/</tspan>
-    <tspan class="sub s3" dx="8">EV racing software</tspan>
+    <tspan class="sub s3" dx="8">open source</tspan>
   </text>
   <text class="sub mono s3" x="0" y="150" font-size="12">NIE Mysuru · ISE '28</text>
 
-  <!-- a small NAV-style line: FundLens, but also just a nice thing to watch -->
+  <!-- a small rising line, just a nice thing to watch -->
   <line class="grid" x1="520" y1="150" x2="800" y2="150"/>
   <line class="grid" x1="520" y1="98"  x2="800" y2="98" stroke-dasharray="2 4"/>
   <path class="area" d="M520,138 L548,132 L572,136 L596,120 L620,124 L644,106 L668,112 L692,90 L716,96 L740,72 L760,78 L780,46 L780,150 L520,150 Z"/>
   <path class="chart" d="M520,138 L548,132 L572,136 L596,120 L620,124 L644,106 L668,112 L692,90 L716,96 L740,72 L760,78 L780,46"/>
   <circle class="pulse" cx="780" cy="46" r="4"/>
   <circle class="head" cx="780" cy="46" r="4"/>
-  <text class="tick mono" x="790" y="42">XIRR</text>
 </svg>

@@ -1,6 +1,6 @@
-<img src="./header.svg" width="100%" alt="Tanishq Dhawan. AI agents, fintech, EV racing software." />
+<img src="./header.svg" width="100%" alt="Tanishq Dhawan. Full-stack developer, AI agents, open source." />
 
-I'm a third-year Information Science student at NIE Mysuru. I write TypeScript and Python, and most of my time goes into two things: AI agents that work with messy real-world data, and finance software where the numbers have to be exactly right.
+I'm a full-stack developer and a third-year Information Science student at NIE Mysuru. I build web apps end to end in TypeScript and Python, from the database schema to the UI, and lately a lot of AI agents that work with messy real-world data.
 
 Outside coursework I lead software for Agnie Racing, our college EV motorsport team, and run the tech side of The Byte Club.
 
@@ -53,14 +53,14 @@ Outside coursework I lead software for Agnie Racing, our college EV motorsport t
 **Hackathons**
 
 <details>
-<summary><a href="https://github.com/HackToBerFest-VVCE/t2c1-dancing-burgers">Sworn</a> &nbsp;Hires AI agents from Solana's open agent registries and keeps only the ones that prove themselves.</summary>
+<summary><a href="https://github.com/HackToBerFest-VVCE/t2c1-dancing-burgers">Sworn</a> &nbsp;<b>2nd place, HacktoberFest VVCE.</b> Hires AI agents from Solana's open agent registries and keeps only the ones that prove themselves.</summary>
 <br>
 
 - Screens every agent the same way: independent on-chain reputation, a liveness check, then a benchmark on SQuAD 2.0, HotpotQA and FEVER
 - LangGraph pipeline where every claim carries its source and is checked by a different agent; a dead agent is swapped out mid-run
 - Writes each agent's performance back on-chain, sealed with a SHA-256 hash of the evidence
 - Also flags fake ratings on the registry: self-ratings, rings, bursts
-- Built with team Dancing Burgers for HacktoberFest VVCE, Track 2. I wrote most of the commits
+- Won 2nd place at HacktoberFest VVCE (Track 2) with team Dancing Burgers. I wrote most of the commits
 
 `Python` `FastAPI` `LangGraph` `Next.js` `Solana` `PostgreSQL` `Redis` `MCP`
 </details>
