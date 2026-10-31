@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="190" viewBox="0 0 840 190" role="img" aria-label="Tanishq Dhawan">
+  <style>
+    :root { --fg: #1f2328; --muted: #656d76; --line: #d0d7de; --accent: #0969da; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e6edf3; --muted: #8d96a0; --line: #30363d; --accent: #4493f8; }
+    }
+    text { font-family: ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Consolas, monospace; }
+    .name { fill: var(--fg); font-size: 44px; font-weight: 600; letter-spacing: -1px;
+            opacity: 0; animation: up .8s ease-out .1s forwards; }
+    .sub  { fill: var(--muted); font-size: 15px; fill-opacity: 0; }
+    .s1 { animation: fadeF .6s ease-out .7s forwards; }
+    .s2 { animation: fadeF .6s ease-out 1.0s forwards; }
+    .s3 { animation: fadeF .6s ease-out 1.3s forwards; }
+    .sub.dot-sep { fill: var(--line); }
+    .grid { stroke: var(--line); stroke-width: 1; }
+    .chart { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+             stroke-dasharray: 520; stroke-dashoffset: 520; animation: draw 2.4s cubic-bezier(.6,.1,.2,1) .5s forwards; }
+    .area { fill: var(--accent); opacity: 0; animation: area 1s ease-out 2.6s forwards; }
+    .head { fill: var(--accent); opacity: 0; animation: fade .3s ease-out 2.8s forwards; }
+    .pulse { fill: none; stroke: var(--accent); opacity: 0; transform-origin: 780px 46px;
+             animation: pulse 2s ease-out 3s infinite; }
+    .tick { fill: var(--muted); font-size: 11px; opacity: 0; animation: fade .5s ease-out 2.9s forwards; }
+    @keyframes up   { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    @keyframes fade { to { opacity: 1; } }
+    @keyframes fadeF { to { fill-opacity: 1; } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes area { to { opacity: .08; } }
+    @keyframes pulse { 0% { opacity: .7; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
+  </style>
+
+  <text class="name" x="0" y="78">Tanishq Dhawan</text>
+
+  <text y="118">
+    <tspan class="sub s1" x="0">AI agents</tspan>
+    <tspan class="sub dot-sep s1" dx="8">/</tspan>
+    <tspan class="sub s2" dx="8">fintech</tspan>
+    <tspan class="sub dot-sep s2" dx="8">/</tspan>
+    <tspan class="sub s3" dx="8">EV racing software</tspan>
+  </text>
+  <text class="sub mono s3" x="0" y="150" font-size="12">NIE Mysuru · ISE '28</text>
+
+  <!-- a small NAV-style line: FundLens, but also just a nice thing to watch -->
+  <line class="grid" x1="520" y1="150" x2="800" y2="150"/>
+  <line class="grid" x1="520" y1="98"  x2="800" y2="98" stroke-dasharray="2 4"/>
+  <path class="area" d="M520,138 L548,132 L572,136 L596,120 L620,124 L644,106 L668,112 L692,90 L716,96 L740,72 L760,78 L780,46 L780,150 L520,150 Z"/>
+  <path class="chart" d="M520,138 L548,132 L572,136 L596,120 L620,124 L644,106 L668,112 L692,90 L716,96 L740,72 L760,78 L780,46"/>
+  <circle class="pulse" cx="780" cy="46" r="4"/>
+  <circle class="head" cx="780" cy="46" r="4"/>
+  <text class="tick mono" x="790" y="42">XIRR</text>
+</svg>
