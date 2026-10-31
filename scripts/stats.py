@@ -152,7 +152,7 @@ def stats_svg(s):
     items = [
         (f"{s['commits']:,}", "commits, all time"),
         (f"{s['year_total']:,}", "contributions this year"),
-        (f"{s['merged']}/{s['prs']}", "pull requests merged"),
+        (str(s["prs"]), f"pull requests, {s['merged']} merged" if s["merged"] else "pull requests opened"),
         (str(s["repos"]), "repos contributed to"),
         (f"{s['current']}d", "current streak"),
         (f"{s['longest']}d", "longest streak"),
