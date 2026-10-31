@@ -50,7 +50,20 @@ Outside coursework I lead software for Agnie Racing, our college EV motorsport t
 - [See it live](https://byteopensource.github.io/)
 </details>
 
-**Before**
+**Hackathons**
+
+<details>
+<summary><a href="https://github.com/HackToBerFest-VVCE/t2c1-dancing-burgers">Sworn</a> &nbsp;Hires AI agents from Solana's open agent registries and keeps only the ones that prove themselves.</summary>
+<br>
+
+- Screens every agent the same way: independent on-chain reputation, a liveness check, then a benchmark on SQuAD 2.0, HotpotQA and FEVER
+- LangGraph pipeline where every claim carries its source and is checked by a different agent; a dead agent is swapped out mid-run
+- Writes each agent's performance back on-chain, sealed with a SHA-256 hash of the evidence
+- Also flags fake ratings on the registry: self-ratings, rings, bursts
+- Built with team Dancing Burgers for HacktoberFest VVCE, Track 2. I wrote most of the commits
+
+`Python` `FastAPI` `LangGraph` `Next.js` `Solana` `PostgreSQL` `Redis` `MCP`
+</details>
 
 <details>
 <summary><a href="https://github.com/CALL-ME-TATA/Retail_Chatbot">EmpathIQ</a> &nbsp;A retail support bot that reads how a customer feels and knows when to hand off to a human.</summary>
@@ -60,6 +73,8 @@ Outside coursework I lead software for Agnie Racing, our college EV motorsport t
 - Built with Team Knight CODERS for the TCS Hackathon
 - [Try it live](https://retail-chatbot-two.vercel.app)
 </details>
+
+**Before**
 
 <details>
 <summary><a href="https://github.com/CALL-ME-TATA/wattwise">WattWise</a> &nbsp;Agents on Google ADK that watch power consumption, flag anomalies and forecast usage.</summary>
@@ -83,7 +98,7 @@ Outside coursework I lead software for Agnie Racing, our college EV motorsport t
 
 <br>
 
-**Tools** &nbsp;TypeScript, Python, C++, React, Node, Express, PostgreSQL, MongoDB, Google ADK
+**Tools** &nbsp;TypeScript, Python, C++, React, Next.js, Node, Express, FastAPI, LangGraph, PostgreSQL, Redis, MongoDB, Solana
 
 <br>
 
