@@ -15,7 +15,6 @@
     rect { opacity: 0; transform-box: fill-box; transform-origin: center; animation: pop .35s ease-out forwards; }
     rect.k { animation-delay: 1.2s; }
     </style>
-<rect x="0" y="32" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1" style="animation-delay: 0.000s"><title>0 on 2025-11-24</title></rect>
 <rect x="0" y="46" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1" style="animation-delay: 0.000s"><title>0 on 2025-11-25</title></rect>
 <rect x="0" y="60" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1" style="animation-delay: 0.000s"><title>0 on 2025-11-26</title></rect>
 <rect x="0" y="74" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1" style="animation-delay: 0.000s"><title>0 on 2025-11-27</title></rect>
@@ -393,6 +392,7 @@
 <rect x="728" y="18" width="11" height="11" rx="2" fill="var(--accent)" fill-opacity=".3" style="animation-delay: 1.144s"><title>2 on 2026-11-22</title></rect>
 <rect x="728" y="32" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1" style="animation-delay: 1.144s"><title>0 on 2026-11-23</title></rect>
 <rect x="728" y="46" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1" style="animation-delay: 1.144s"><title>0 on 2026-11-24</title></rect>
+<rect x="728" y="60" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1" style="animation-delay: 1.144s"><title>0 on 2026-11-25</title></rect>
 <text class="m" x="0" y="136">540 contributions in the last year</text>
 <text class="m" x="602" y="136">Less</text>
 <rect class="k" x="634" y="126" width="11" height="11" rx="2" fill="var(--empty)" fill-opacity="1"/>
